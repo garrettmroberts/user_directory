@@ -1,0 +1,82 @@
+[
+  {
+    "id": 1,
+    "firstName": "Geoff",
+    "lastName": "Geoffrey",
+    "title": "senior software engineer",
+    "department": "tech",
+    "salary": 90000
+  },
+  {
+    "id": 2,
+    "firstName": "Jeffrey",
+    "lastName": "Jones",
+    "title": "junior software engineer",
+    "department": "tech",
+    "salary": 70000
+  },
+  {
+    "id": 3,
+    "firstName": "Eliza",
+    "lastName": "Montgomery",
+    "title": "front end web dev",
+    "department": "tech",
+    "salary": 60000
+  },
+  {
+    "id": 4,
+    "firstName": "Alice",
+    "lastName": "Montigo",
+    "title": "dev ops engineer",
+    "department": "tech",
+    "salary": 110000
+  },
+  {
+    "id": 5,
+    "firstName": "Emily",
+    "lastName": "Alex",
+    "title": "brand strategist",
+    "department": "marketing",
+    "salary": 60000
+  },
+  {
+    "id": 6,
+    "firstName": "Alexa",
+    "lastName": "Alexson",
+    "title": "social media marketer",
+    "department": "marketing",
+    "salary": 50000
+  },
+  {
+    "id": 7,
+    "firstName": "Emilia",
+    "lastName": "Knox",
+    "title": "ad designer",
+    "department": "marketing",
+    "salary": 50000
+  },
+  {
+    "id": 8,
+    "firstName": "Rupert",
+    "lastName": "Loxley",
+    "title": "lead generation",
+    "department": "sales",
+    "salary": 70000
+  },
+  {
+    "id": 9,
+    "firstName": "Rolf",
+    "lastName": "Axley",
+    "title": "B2B sales",
+    "department": "sales",
+    "salary": 60000
+  },
+  {
+    "id": 10,
+    "firstName": "Jasmine",
+    "lastName": "Albatross",
+    "title": "accountant",
+    "department": "sales",
+    "salary": 75000
+  }
+]
