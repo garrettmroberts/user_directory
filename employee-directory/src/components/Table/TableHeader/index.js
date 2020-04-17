@@ -1,9 +1,9 @@
 import React from "react";
 
-function TableHeader(props) {
+function TableHeader({ keys }) {
   return <thead className="thead-dark">
     <tr>
-      {props.keys.map(key => {
+      {keys.map(key => {
         return <th scope="col">{key}</th>
       })}
     </tr>

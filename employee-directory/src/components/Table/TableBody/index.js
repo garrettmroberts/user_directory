@@ -1,8 +1,8 @@
 import React from "react";
 
-function TableBody(props) {
+function TableBody({ data }) {
   return <tbody>
-    {props.data.map(datapoint => {
+    {data.map(datapoint => {
       return <tr>
         <td>{datapoint.id}</td>
         <td>{datapoint.firstName}</td>

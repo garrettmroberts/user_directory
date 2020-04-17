@@ -2,10 +2,11 @@ import React from "react";
 import TableHeader from "./TableHeader";
 import TableBody from "./TableBody";
 
-function Table(props) {
+// Requires keys and table data
+function Table({ keys, data }) {
   return <table className="table table-hover table-light">
-      <TableHeader keys={props.keys} />
-      <TableBody data={props.data} />
+      <TableHeader keys={keys} />
+      <TableBody data={data} />
     </table>
 };
 
