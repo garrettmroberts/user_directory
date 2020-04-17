@@ -3,7 +3,7 @@ import React from "react";
 function TableBody({ data }) {
   return <tbody>
     {data.map(datapoint => {
-      return <tr>
+      return <tr key={datapoint.id}>
         <td>{datapoint.id}</td>
         <td>{datapoint.firstName}</td>
         <td>{datapoint.lastName}</td>
