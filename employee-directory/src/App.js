@@ -3,8 +3,7 @@ import Container from "./components/Container";
 import Row from "./components/Row";
 import Col from "./components/Col";
 import Table from "./components/Table";
-import TableHeader from "./components/TableHeader";
-import TableBody from "./components/TableBody";
+import DropDown from "./components/DropDown";
 import employees from "./employees.json";
 
 class App extends Component {
@@ -17,16 +16,17 @@ class App extends Component {
 
   render() {
     return(
-      <div style={{height: "100vh"}}>
+      <div className="my-5">
         <Container>
           <Row>
             <Col size="md-12" className="col-md-12 d-flex justify-content-center align-content-center">
-              <Table>
-                <TableHeader keys={this.keys} />
-                <TableBody data={this.state.employees}/>
+              <Table keys={this.keys} data={this.state.employees}>
               </Table>
             </Col>
           </Row>
+            <DropDown name="sort" keys={this.keys} type="success" />
+            &nbsp;
+            <DropDown name="Filter" keys={this.keys}  type="secondary"/>
         </Container>
       </div>
     )
