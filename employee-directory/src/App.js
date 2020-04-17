@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import Container from "./components/Container";
 import Row from "./components/Row";
 import Col from "./components/Col";
@@ -11,10 +11,21 @@ function App() {
   const [employeesState, setEmployeesState] = useState(employees);
   const [keysState, setKeysState] = useState(Object.keys(employeesState[0]));
 
+  function departmentKeys() {
+    let keys = [];
+    employeesState.map(employee => {
+      keys.push(employee.department);
+    });
+    let uniqueKeys = Array.from(new Set(keys));
+    return uniqueKeys;
+  };
+
+  function reset() {
+    console.log("We need to reset the array.");
+  };
+
   // Sorts or filters table based on type
   function changeParams(type, affectedRow) {
-    console.log("TYPE: ", type);
-    console.log("AFFECTED ROW: ", affectedRow)
     if (type === "sort") {
       setOrderState(affectedRow);
       if (affectedRow === "salary" || affectedRow === "id") {
@@ -26,8 +37,14 @@ function App() {
         console.log(query);
         const sorted = employeesState.sort((a,b) => eval(query));
         console.log(sorted);
-      }
-    };
+      };
+    } else {
+      console.log(affectedRow);
+      const filtered = employeesState.filter((employee) => {
+        return employee.department === affectedRow
+      });
+      setEmployeesState(filtered);
+    }
   };
 
   return(
@@ -44,8 +61,9 @@ function App() {
 
           <DropDown name="sort" type="success" keys={keysState} func={changeParams} />
           &nbsp;
-
-          <DropDown name="filter" type="secondary" keys={keysState} func={changeParams} />
+          <DropDown name="filter by department" type="secondary" keys={departmentKeys()} func={changeParams} />
+          &nbsp;
+          <button className="btn btn-danger btn-lg btn-block" onClick={reset()}>Reset</button>
       </Container>
     </div>
   )
