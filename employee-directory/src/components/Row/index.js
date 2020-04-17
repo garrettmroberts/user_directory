@@ -1,5 +1,4 @@
 import React from "react";
-import { render } from "react-dom";
 
 function Row(props) {
   return <div className={`row${props.fluid ? "-fluid" : ""}`}>
