@@ -21,7 +21,7 @@ function App() {
   };
 
   function reset() {
-    console.log("We need to reset the array.");
+    setEmployeesState(employees);
   };
 
   // Sorts or filters table based on type
@@ -63,7 +63,7 @@ function App() {
           &nbsp;
           <DropDown name="filter by department" type="secondary" keys={departmentKeys()} func={changeParams} />
           &nbsp;
-          <button className="btn btn-danger btn-lg btn-block" onClick={reset()}>Reset</button>
+          <button className="btn btn-danger btn-lg btn-block" onClick={() => reset()}>Reset</button>
       </Container>
     </div>
   )
