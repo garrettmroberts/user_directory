@@ -31,15 +31,11 @@ function Main() {
       if (affectedRow === "salary" || affectedRow === "id") {
         const query = `a.${affectedRow} - b.${affectedRow}`
         const sorted = employeesState.sort((a, b) => eval(query));
-        console.log(sorted);
       } else {
         const query = `a.${affectedRow}.localeCompare(b.${affectedRow})`;
-        console.log(query);
         const sorted = employeesState.sort((a, b) => eval(query));
-        console.log(sorted);
       };
     } else {
-      console.log(affectedRow);
       const filtered = employeesState.filter((employee) => {
         return employee.department === affectedRow
       });
