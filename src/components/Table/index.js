@@ -4,10 +4,14 @@ import TableBody from "../TableBody";
 
 // Requires keys and table data
 function Table({ keys, data }) {
-  return <table className="table table-hover table-light">
-      <TableHeader keys={keys} />
-      <TableBody data={data} />
-    </table>
+  return (
+    <div className="table-responsive">
+      <table className="table table-hover table-light">
+        <TableHeader keys={keys} />
+        <TableBody data={data} />
+      </table>
+    </div>
+  );
 };
 
 export default Table;
