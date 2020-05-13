@@ -51,7 +51,7 @@ function Main() {
     <div className="my-5">
       <Container>
         <Row>
-          <h1>Employee Directory</h1>
+          <h1>Employee Directory - Currently sorting by {orderState}</h1>
         </Row>
         <Row>
           <Col size="md-12" className="col-md-12 d-flex justify-content-center align-content-center">
