@@ -47,7 +47,7 @@ function Main() {
     <div className="my-5">
       <Container>
         <Row>
-          <h1>Employee Directory - Currently sorting by {orderState}</h1>
+          <h1 style={{fontSize: "2em"}}>Employee Directory<small className="text-muted"> - Currently sorting by {orderState}</small></h1>
         </Row>
         <Row>
           <Col size="md-12" className="col-md-12 d-flex justify-content-center align-content-center">
